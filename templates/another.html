@@ -1,0 +1,67 @@
+{%extends 'base.html' %}
+{% block head %}
+<style>
+    .container {
+      width: 45%;
+      float: right;
+      margin-right: 3%;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    #left-container {
+      background-color: #f2f2f2;
+      padding:20px;
+      color:black;
+    }
+
+    #right-container {
+      background-color: #e6e6e6;
+      padding:20px;
+      color:black;
+    }
+    #music-player {
+      background-color: #27AAE1;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 30%;
+      text-align: left;
+
+    }
+
+    #music-player audio {
+      width: 100%;
+    }
+</style>
+{% endblock %}
+{% block body %}
+    <body style="background-color: #27AAE1; color:whitesmoke;">
+        
+            <div id="left-container" class="container">
+              <h2>Left Container</h2>
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+          
+            <div id="right-container" class="container">
+              <h2>Right Container</h2>
+              <ul>
+                <li>Item A</li>
+                <li>Item B</li>
+                <li>Item C</li>
+              </ul>
+            </div>
+            <div id="music-player" style="margin-left:5%">
+                <audio controls>
+                  <source src="your-audio-file.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+    </body>
+    {% endblock %}
